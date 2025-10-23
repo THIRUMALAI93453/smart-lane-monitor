@@ -52,13 +52,13 @@ export const Dashboard = ({ totalAnalyses, totalViolations, recentViolations }: 
           const Icon = stat.icon;
           return (
             <Card key={index} className="p-4 bg-card border-border">
-              <div className="flex items-center gap-3">
-                <div className={`p-3 rounded-lg ${stat.bgColor}`}>
+              <div className="flex items-start gap-3">
+                <div className={`p-3 rounded-lg ${stat.bgColor} flex-shrink-0`}>
                   <Icon className={`h-6 w-6 ${stat.color}`} />
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">{stat.label}</p>
-                  <p className="text-2xl font-bold text-foreground">{stat.value}</p>
+                <div className="flex flex-col justify-center min-w-0 flex-1">
+                  <p className="text-sm text-muted-foreground leading-tight mb-1">{stat.label}</p>
+                  <p className="text-2xl font-bold text-foreground leading-tight">{stat.value}</p>
                 </div>
               </div>
             </Card>
@@ -73,12 +73,12 @@ export const Dashboard = ({ totalAnalyses, totalViolations, recentViolations }: 
             {recentViolations.slice(0, 5).map((violation, index) => (
               <div 
                 key={index}
-                className="flex items-center justify-between py-2 border-b border-border last:border-0"
+                className="flex items-center justify-between py-2 border-b border-border last:border-0 gap-4"
               >
-                <span className="text-sm font-medium text-foreground">
+                <span className="text-sm font-medium text-foreground capitalize">
                   {violation.type.replace(/_/g, ' ')}
                 </span>
-                <span className="text-xs text-muted-foreground">
+                <span className="text-xs text-muted-foreground whitespace-nowrap">
                   {new Date(violation.timestamp).toLocaleTimeString()}
                 </span>
               </div>
