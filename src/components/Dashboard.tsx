@@ -8,8 +8,8 @@ interface DashboardProps {
 }
 
 export const Dashboard = ({ totalAnalyses, totalViolations, recentViolations }: DashboardProps) => {
-  const violationRate = totalAnalyses > 0 
-    ? Math.round((totalViolations / totalAnalyses) * 100) 
+  const violationRate = totalAnalyses > 0
+    ? Math.round((totalViolations / totalAnalyses) * 100)
     : 0;
 
   const stats = [
@@ -46,19 +46,21 @@ export const Dashboard = ({ totalAnalyses, totalViolations, recentViolations }: 
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-foreground">Analytics Dashboard</h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat, index) => {
           const Icon = stat.icon;
           return (
-            <Card key={index} className="p-3 bg-card border-border">
-              <div className="grid grid-cols-[40px,1fr] items-center gap-3 w-full">
-                <div className={`${stat.bgColor} h-10 w-10 rounded-lg grid place-items-center flex-shrink-0`}>
-                  <Icon className={`h-5 w-5 ${stat.color}`} />
+            <Card key={index} className="p-4 bg-card border-border">
+              <div className="flex items-center gap-4 w-full">
+                {/* Icon container */}
+                <div className={`${stat.bgColor} h-12 w-12 min-w-[48px] rounded-lg flex items-center justify-center`}>
+                  <Icon className={`h-6 w-6 ${stat.color}`} />
                 </div>
-                <div className="min-w-0 grid grid-rows-2">
-                  <span className="text-xs text-muted-foreground leading-tight truncate">{stat.label}</span>
-                  <span className="text-xl font-bold text-foreground leading-tight whitespace-nowrap">{stat.value}</span>
+                {/* Text content */}
+                <div className="flex-1 min-w-0 grid grid-rows-2">
+                  <span className="text-sm text-muted-foreground leading-tight truncate">{stat.label}</span>
+                  <span className="text-2xl font-bold text-foreground leading-tight whitespace-nowrap">{stat.value}</span>
                 </div>
               </div>
             </Card>
@@ -71,7 +73,7 @@ export const Dashboard = ({ totalAnalyses, totalViolations, recentViolations }: 
           <h3 className="text-lg font-semibold mb-4 text-foreground">Recent Violations</h3>
           <div className="space-y-2">
             {recentViolations.slice(0, 5).map((violation, index) => (
-              <div 
+              <div
                 key={index}
                 className="flex items-center justify-between py-2 border-b border-border last:border-0 gap-4"
               >
