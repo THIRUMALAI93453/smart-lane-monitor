@@ -51,7 +51,7 @@ export const Dashboard = ({ totalAnalyses, totalViolations, recentViolations }: 
         {stats.map((stat, index) => {
           const Icon = stat.icon;
           return (
-            <Card key={index} className="p-4 bg-card border-border">
+            <Card key={index} className="p-3 bg-card border-border">
               <div className="grid grid-cols-[40px,1fr] items-center gap-3 w-full">
                 <div className={`${stat.bgColor} h-10 w-10 rounded-lg grid place-items-center flex-shrink-0`}>
                   <Icon className={`h-5 w-5 ${stat.color}`} />
