@@ -52,13 +52,13 @@ export const Dashboard = ({ totalAnalyses, totalViolations, recentViolations }: 
           const Icon = stat.icon;
           return (
             <Card key={index} className="p-4 bg-card border-border">
-              <div className="grid grid-cols-[48px,1fr] items-center gap-4 w-full">
-                <div className={`${stat.bgColor} h-12 w-12 rounded-lg grid place-items-center flex-shrink-0`}>
-                  <Icon className={`h-6 w-6 ${stat.color}`} />
+              <div className="grid grid-cols-[40px,1fr] items-center gap-3 w-full">
+                <div className={`${stat.bgColor} h-10 w-10 rounded-lg grid place-items-center flex-shrink-0`}>
+                  <Icon className={`h-5 w-5 ${stat.color}`} />
                 </div>
                 <div className="min-w-0 grid grid-rows-2">
-                  <span className="text-sm text-muted-foreground leading-tight truncate">{stat.label}</span>
-                  <span className="text-2xl font-bold text-foreground leading-tight whitespace-nowrap">{stat.value}</span>
+                  <span className="text-xs text-muted-foreground leading-tight truncate">{stat.label}</span>
+                  <span className="text-xl font-bold text-foreground leading-tight whitespace-nowrap">{stat.value}</span>
                 </div>
               </div>
             </Card>
