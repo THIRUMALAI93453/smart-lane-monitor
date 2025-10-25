@@ -121,8 +121,7 @@ const Index = () => {
       <footer className="border-t border-border bg-card mt-12">
         <div className="container mx-auto px-4 py-6">
           <div className="text-center text-sm text-muted-foreground">
-            <p>AI-powered traffic violation detection system</p>
-            <p className="mt-1">Detects: Helmet violations • Red light running • Speed violations • Lane violations • Wrong way driving</p>
+            <p>© 2024. All rights reserved to THIRUMALAI.</p>
           </div>
         </div>
       </footer>
