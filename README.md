@@ -1,73 +1,34 @@
-# 💻 Welcome to My Lovable Project
+# 🚦 ZeroCrash
 
-## 🧠 Project Info
+**Real-Time Traffic Violation Detection | Custom-Trained AI with Gemini API**
 
-This project was **80% built and designed by me**, with **20% support from Lovable AI** for setup and generation assistance.
-Every part — from logic, design flow, and customization — reflects my **own learning and development** journey, powered partly by **Lovable’s AI tools**.
+## Overview
 
-## 🛠️ How to Edit the Code
+ZeroCrash detects **traffic violations** in real time using a **custom-trained AI model** powered by the **Gemini API**.
+Prelim-ready MVP focuses on **helmet violations, red light running, and lane violations**.
 
-You can edit or extend this project in a few ways:
+## Features
 
-### 💜 Option 1: Use Lovable
+* Detects multiple traffic violations in real time
+* Supports helmet detection, red light running, and lane violations
+* Fast inference with Gemini API integration
+* Works on live camera feeds or recorded videos
 
-Visit the [Lovable Project](https://lovable.dev/projects/0ca823ea-97d5-43da-b333-dce5cb42f8bf) and continue editing with prompts.
-All updates made here will automatically commit to this repository.
+## Tech Stack
 
-### 💻 Option 2: Edit Locally
+* **Object Detection:** YOLOv8 / Custom CNN
+* **Computer Vision:** OpenCV
+* **API:** Gemini API for AI inference
+* **Backend:** Python / Flask API
+* **Frontend:** Lightweight web interface
 
-If you prefer local development:
+## Future Scope
 
-```bash
-# Step 1: Clone the repository
-git clone <YOUR_GIT_URL>
+* Speed limit and wrong-way violation detection
+* Edge deployment for street-level monitoring
+* Cloud dashboard for analytics and alerts
+* Integration with traffic management systems
 
-# Step 2: Navigate to the project
-cd <YOUR_PROJECT_NAME>
+## License
 
-# Step 3: Install dependencies
-npm i
-
-# Step 4: Start development server
-npm run dev
-```
-
-### ✏️ Option 3: Edit Directly on GitHub
-
-* Open the desired file.
-* Click the ✏️ “Edit” icon.
-* Modify and commit your changes directly.
-
-### 🌐 Option 4: GitHub Codespaces
-
-* Click **Code → Codespaces → New Codespace**.
-* Edit, commit, and push your updates.
-
-## ⚙️ Tech Stack
-
-This project uses:
-
-* **Vite**
-* **TypeScript**
-* **React**
-* **shadcn-ui**
-* **Tailwind CSS**
-
-## 🚀 Deployment
-
-Publish instantly from [Lovable](https://lovable.dev/projects/0ca823ea-97d5-43da-b333-dce5cb42f8bf):
-Go to **Share → Publish**.
-
-## 🌍 Custom Domain
-
-You can attach your own domain:
-
-* Open **Project → Settings → Domains**
-* Click **Connect Domain**
-
-Learn more: [Lovable Custom Domain Setup](https://docs.lovable.dev/features/custom-domain#custom-domain)
-
----
-
-🔥 **80% built by me | 20% powered by Lovable AI**
-💡 *A self-driven, AI-assisted creation blending skill, innovation, and learning!*
+MIT License | Open for research and innovation
