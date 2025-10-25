@@ -56,9 +56,9 @@ export const Dashboard = ({ totalAnalyses, totalViolations, recentViolations }: 
                 <div className={`${stat.bgColor} h-12 w-12 rounded-lg grid place-items-center flex-shrink-0`}>
                   <Icon className={`h-6 w-6 ${stat.color}`} />
                 </div>
-                <div className="min-w-0">
-                  <p className="block text-sm text-muted-foreground leading-tight mb-1">{stat.label}</p>
-                  <p className="block text-2xl font-bold text-foreground leading-tight">{stat.value}</p>
+                <div className="min-w-0 grid grid-rows-2">
+                  <span className="text-sm text-muted-foreground leading-tight truncate">{stat.label}</span>
+                  <span className="text-2xl font-bold text-foreground leading-tight whitespace-nowrap">{stat.value}</span>
                 </div>
               </div>
             </Card>
