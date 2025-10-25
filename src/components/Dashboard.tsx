@@ -52,8 +52,8 @@ export const Dashboard = ({ totalAnalyses, totalViolations, recentViolations }: 
           const Icon = stat.icon;
           return (
             <Card key={index} className="p-4 bg-card border-border">
-              <div className="flex items-center gap-3 w-full">
-                <div className={`p-3 rounded-lg ${stat.bgColor} flex-shrink-0`}>
+              <div className="flex items-center gap-4 w-full">
+                <div className={`p-3 rounded-lg h-12 w-12 grid place-items-center ${stat.bgColor} flex-shrink-0`}>
                   <Icon className={`h-6 w-6 ${stat.color}`} />
                 </div>
                 <div className="flex flex-col justify-center min-w-0 flex-1">

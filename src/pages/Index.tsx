@@ -108,11 +108,13 @@ const Index = () => {
 
           {/* Right Column - Dashboard */}
           <div className="lg:col-span-1">
-            <Dashboard 
-              totalAnalyses={totalAnalyses}
-              totalViolations={totalViolations}
-              recentViolations={recentViolations}
-            />
+            {(isAnalyzing || totalAnalyses > 0) && (
+              <Dashboard 
+                totalAnalyses={totalAnalyses}
+                totalViolations={totalViolations}
+                recentViolations={recentViolations}
+              />
+            )}
           </div>
         </div>
       </main>
